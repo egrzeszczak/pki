@@ -1,0 +1,50 @@
+%%  ==================================================
+%%  Settings
+%%  ==================================================
+
+\usepackage[a4paper, inner=1cm, outer=1cm, top=2cm, bottom=2cm]{geometry}
+\usepackage{fontspec}
+\usepackage{blindtext}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{index}
+\usepackage{listings}
+\usepackage{color}
+
+%%  ==================================================
+%%  Styles
+%%  ==================================================
+
+\setmainfont{Arimo}
+
+\pagestyle{fancy}
+\fancyfoot{}
+\raggedbottom
+
+\date{}
+
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{red}{rgb}{0.9,0.1,0.1}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\newfontfamily{\codefont}{Input Mono} % You need to have this ttf in your os
+
+\lstset{frame=tb,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\codefont\small},
+  numbers=none,
+  numberstyle=\tiny\color{red},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}

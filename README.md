@@ -8,7 +8,7 @@ I'm learning as I create the course, so don't expect the highest quality. Also I
 
 Cryptographic Foundations
 
-1. Symmetric Encryption, Block Ciphers, Stream Ciphers
+1. Symmetric Encryption, Block Ciphers and Stream Ciphers
 2. Asymmetric Encryption, Rivest-Shamir-Adleman (RSA), Elliptic Curve (EC)
 3. Hash Functions, SHA2, SHA1, MD5
 4. Key Exchange, Diffie-Hellman (DH)
