@@ -1,7 +1,7 @@
 \documentclass[12pt]{article}
 \input{../../styles/style.tex}
 
-\newcommand{\documenttitle}{Symmetric Encryption, Block Ciphers and Stream Ciphers}
+\newcommand{\documenttitle}{1. Symmetric Encryption, Block Ciphers and Stream Ciphers}
 \fancyhead[L]{\documenttitle}
 \title{\documenttitle}
 
@@ -14,7 +14,7 @@ Learn the fundamentals of symmetric encryption, as well as the differences betwe
 
 \subsection{Symmetric Encryption}
 
-The method where encrypting plaintext into ciphertext and decrypting ciphertext back into plaintext \textbf{using a shared secret} is called symmetric encryption. We can think of a simple scenario where Alice and Bob agree upon a key and an algorithm, and then they use the key to encrypt and decrypt the information they want to share with each other.
+The method where encrypting plaintext into ciphertext and decrypting ciphertext back into plaintext \textbf{using a shared secret} is called symmetric encryption. We can think of a simple scenario where Alice and Bob agree upon a shared key and an algorithm, and then they use the key to encrypt and decrypt the information they want to share with each other.
 
 % You need `context' package for \externalfigure to work
 % \externalfigure[https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Simple_symmetric_encryption-en.svg/1920px-Simple_symmetric_encryption-en.svg.png] 
@@ -24,6 +24,13 @@ The method where encrypting plaintext into ciphertext and decrypting ciphertext 
     \label{fig:symmetric}
 \end{center}
 
+Over the course of history we've developed a plethora of different algorithms, a lot of them now are deprecated due to security flaws. Most popular ones, however, that we still use and consider secure are \href{https://en.wikipedia.org/wiki/Advanced_Encryption_Standard}{AES \ExternalLink} (also known as Rijndael), \href{https://en.wikipedia.org/wiki/ChaCha20}{ChaCha20 \ExternalLink}, \href{https://en.wikipedia.org/wiki/Camellia_(cipher)}{Camellia \ExternalLink}, \href{https://en.wikipedia.org/wiki/Twofish}{Twofish \ExternalLink}, and a couple of others. You may have also heard about \href{https://en.wikipedia.org/wiki/RC4}{RC4 \ExternalLink}, \href{https://en.wikipedia.org/wiki/Data_Encryption_Standard}{DES \ExternalLink} and \href{https://en.wikipedia.org/wiki/Triple_DES}{3DES \ExternalLink} but they were proven to be insecure and deprecated. 
+
+% One of the issues that immediately come to mind is how do we securely share the key over the Internet? That is where symmetric encryption is inherently less secure than asymmetric encryption. 
+
+\subsection{Common uses of symmetric encryption}
+\textit{\blindtext[1]}
+\subsection{Risks associated with symmetric encryption}
 \textit{\blindtext[1]}
 \subsection{Block ciphers}
 \textit{\blindtext[1]}

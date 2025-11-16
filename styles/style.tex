@@ -7,11 +7,13 @@
 \usepackage{blindtext}
 \usepackage{enumitem}
 \usepackage{fancyhdr}
+\usepackage[hidelinks]{hyperref}
 \usepackage{index}
 \usepackage{listings}
 \usepackage{color}
 \usepackage{graphicx}
 \usepackage{caption}
+\usepackage{tikz}           % for drawing external link icon
 
 %%  ==================================================
 %%  Styles
@@ -32,6 +34,28 @@
 \definecolor{red}{rgb}{0.9,0.1,0.1}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
 \definecolor{mauve}{rgb}{0.58,0,0.82}
+
+
+\newcommand{\ExternalLink}{%
+    \tikz[x=1.2ex, y=1.2ex, baseline=-0.05ex]{% 
+        \begin{scope}[x=1ex, y=1ex]
+            \clip (-0.1,-0.1) 
+                --++ (-0, 1.2) 
+                --++ (0.6, 0) 
+                --++ (0, -0.6) 
+                --++ (0.6, 0) 
+                --++ (0, -1);
+            \path[draw, 
+                line width = 0.5, 
+                rounded corners=0.5] 
+                (0,0) rectangle (1,1);
+        \end{scope}
+        \path[draw, line width = 0.5] (0.5, 0.5) 
+            -- (1, 1);
+        \path[draw, line width = 0.5] (0.6, 1) 
+            -- (1, 1) -- (1, 0.6);
+        }
+    }
 
 \newfontfamily{\codefont}{Input Mono} % You need to have this ttf in your os
 
