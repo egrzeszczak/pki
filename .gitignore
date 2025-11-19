@@ -5,3 +5,4 @@ workshop/
 *.log
 *.synctex.gz
 *.xdv
+*.out

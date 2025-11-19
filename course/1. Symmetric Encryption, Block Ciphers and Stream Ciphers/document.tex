@@ -8,32 +8,32 @@
 \begin{document}
 \maketitle
 
-Learn the fundamentals of symmetric encryption, as well as the differences between block ciphers and stream ciphers, and their respective modes of operation. This lesson will not go too much in depth to keep these lessons simple, so I highly recommend you to explore each concept in your own time. I'll also provide some resources that I deemed are insightful.
+Learn the fundamentals of symmetric encryption, as well as the differences between block ciphers and stream ciphers, and their respective modes of operation. This lesson will not go too much in depth to keep these lessons simple, so I highly recommend you to explore each concept in your own time.
 
 \section{Learn}
 
 \subsection{Symmetric Encryption}
 
-The method where encrypting plaintext into ciphertext and decrypting ciphertext back into plaintext \textbf{using a shared secret} is called symmetric encryption. We can think of a simple scenario where Alice and Bob agree upon a shared key and an algorithm, and then they use the key to encrypt and decrypt the information they want to share with each other.
+Encrypting and decrypting information \textbf{using the same key} for both of these operations is what we call symmetric cryptography.
 
-% You need `context' package for \externalfigure to work
-% \externalfigure[https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Simple_symmetric_encryption-en.svg/1920px-Simple_symmetric_encryption-en.svg.png] 
 \begin{center}
     \includegraphics[width=0.5\textwidth]{resources/symmetric.png}
     \captionof{figure}[LOF entry]{Symmetric encryption process}
     \label{fig:symmetric}
 \end{center}
 
-Over the course of history we've developed a plethora of different algorithms, a lot of them now are deprecated due to security flaws. Most popular ones, however, that we still use and consider secure are \href{https://en.wikipedia.org/wiki/Advanced_Encryption_Standard}{AES \ExternalLink} (also known as Rijndael), \href{https://en.wikipedia.org/wiki/ChaCha20}{ChaCha20 \ExternalLink}, \href{https://en.wikipedia.org/wiki/Camellia_(cipher)}{Camellia \ExternalLink}, \href{https://en.wikipedia.org/wiki/Twofish}{Twofish \ExternalLink}, and a couple of others. You may have also heard about \href{https://en.wikipedia.org/wiki/RC4}{RC4 \ExternalLink}, \href{https://en.wikipedia.org/wiki/Data_Encryption_Standard}{DES \ExternalLink} and \href{https://en.wikipedia.org/wiki/Triple_DES}{3DES \ExternalLink} but they were proven to be insecure and deprecated. 
+A plethora of different algorithms have been developed over the years. Most commonly used to this day are \href{https://en.wikipedia.org/wiki/Advanced_Encryption_Standard}{AES \ExternalLink} (also known as Rijndael), \href{https://en.wikipedia.org/wiki/ChaCha20}{ChaCha20 \ExternalLink}, \href{https://en.wikipedia.org/wiki/ARIA_(cipher)}{ARIA \ExternalLink} \href{https://en.wikipedia.org/wiki/Camellia_(cipher)}{Camellia \ExternalLink}, and a couple of others. You may have also heard about ciphers like \href{https://en.wikipedia.org/wiki/RC4}{RC4 \ExternalLink}, \href{https://en.wikipedia.org/wiki/Data_Encryption_Standard}{DES \ExternalLink} and \href{https://en.wikipedia.org/wiki/Triple_DES}{3DES \ExternalLink}, however they are considered to be insecure and therefore were deprecated. 
 
-% One of the issues that immediately come to mind is how do we securely share the key over the Internet? That is where symmetric encryption is inherently less secure than asymmetric encryption. 
+\subsection{Where is it used?}
 
-\subsection{Common uses of symmetric encryption}
+Whenever we talk about encryption protocols, you can safely assume symmetric encryption is used. For example, TLS secures web access by combining symmetric and asymmetric ciphers, key exchange, authentication, and hashing (in what we call a ciphersuite). Symmetric ciphers are also the standard for encrypting large data volumes. VeraCrypt, a disk encryption utility, uses AES, Camellia, Kuznyechik, where as BitLocker uses AES. SSH used RC4, DES, and 3DES in the past, but now primarily relies on AES and ChaCha20.
+
+\subsection{Symmetric vs. Asymmetric}
 \textit{\blindtext[1]}
-\subsection{Risks associated with symmetric encryption}
-\textit{\blindtext[1]}
+
 \subsection{Block ciphers}
 \textit{\blindtext[1]}
+
 \subsection{Stream ciphers}
 \textit{\blindtext[1]}
 
