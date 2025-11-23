@@ -12,7 +12,7 @@ Learn the fundamentals of symmetric encryption, as well as the differences betwe
 
 \section{Learn}
 
-\subsection{Symmetric Encryption}
+\subsection{Fundamentals}
 
 Encrypting and decrypting information \textbf{using the same key} for both of these operations is what we call symmetric cryptography.
 
@@ -38,26 +38,29 @@ Distinctive differences between symmetric and asymmetric cryptography have been 
     \hline
     & Symmetric & Asymmetric \\
     \hline
-    Key aspects & Symmetric cryptography uses \textbf{one key} to encrypt and decrypt information. & Asymmetric cryptography uses \textbf{two keys} that are mathematically-bound, where one is public and shared with others and the other one is kept private. Public key is used for encrypting messages, and the private key is used to decrypting messages. \\
+    Key aspects & Symmetric cryptography uses \textbf{one key} to both encrypt and decrypt information. & Asymmetric cryptography uses \textbf{two mathematically related keys}: a public key (shared with others) and a private key (kept secret). The public key encrypts messages, while the private key decrypts them. \\
     \hline
-    Key security & Anyone that has access to the key can decrypt the ciphertext. & You can only decrypt information if you are in possesion of the private key. Having access to the public key does not give the adversary the ability to decrypt information. \\
+    Key security & Anyone with access to the key can decrypt the ciphertext. & Only the holder of the private key can decrypt information. Access to the public key does not enable an adversary to decrypt messages. \\
     \hline
-    Use cases & Encrypting large volumes of data, ie. files, drives, streams, etc. & Encrypting smaller volumes of data (messages, e-mails, keys), creating digital signatures, key exchange \\
+    Use cases & Encrypting large volumes of data (e.g., files, drives, streams). & Encrypting smaller volumes of data (e.g., messages, emails, keys), creating digital signatures, and key exchange. \\
     \hline
-    Operation speed & Encryption and decryption is usually very fast and efficient, computational requirements are smaller. & Asymmetric operations are slower due to key sizes, computational overhead  mathematical complexity. \\
+    Operation speed & Encryption and decryption are usually fast and efficient, with lower computational requirements. & Asymmetric operations are slower due to larger key sizes, computational overhead, and mathematical complexity. \\
     \hline
-    Assurances & Symmetric ciphers provide only \textbf{Confidentiality}. & Asymmetric ciphers provide \textbf{Confidentiality}, as well as \textbf{Integrity} and \textbf{Non-repudiation}.\\
+    Assurances & Symmetric ciphers provide only \textbf{confidentiality}. & Asymmetric ciphers provide \textbf{confidentiality}, \textbf{integrity}, and \textbf{non-repudiation}. \\
     \hline
+
 \end{tabular}
 }
 \end{center}
 
-You should understand that symmetric cryptography-despite it's security implications and limitations- plays an important part in what we call today hybrid cryptography.
+You should understand that symmetric cryptography—despite its disadvantages—plays an important role in modern cryptography use cases as well as in hybrid cryptography scenarios.
 
-\subsection{Block ciphers}
+\subsection{Types of ciphers}
+
+\subsubsection{Block ciphers}
 \textit{\blindtext[1]}
 
-\subsection{Stream ciphers}
+\subsubsection{Stream ciphers}
 \textit{\blindtext[1]}
 
 \section{Practice}
