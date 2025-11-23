@@ -22,14 +22,37 @@ Encrypting and decrypting information \textbf{using the same key} for both of th
     \label{fig:symmetric}
 \end{center}
 
-A plethora of different algorithms have been developed over the years. Most commonly used to this day are \href{https://en.wikipedia.org/wiki/Advanced_Encryption_Standard}{AES \ExternalLink} (also known as Rijndael), \href{https://en.wikipedia.org/wiki/ChaCha20}{ChaCha20 \ExternalLink}, \href{https://en.wikipedia.org/wiki/ARIA_(cipher)}{ARIA \ExternalLink} \href{https://en.wikipedia.org/wiki/Camellia_(cipher)}{Camellia \ExternalLink}, and a couple of others. You may have also heard about ciphers like \href{https://en.wikipedia.org/wiki/RC4}{RC4 \ExternalLink}, \href{https://en.wikipedia.org/wiki/Data_Encryption_Standard}{DES \ExternalLink} and \href{https://en.wikipedia.org/wiki/Triple_DES}{3DES \ExternalLink}, however they are considered to be insecure and therefore were deprecated. 
+A plethora of different algorithms have been developed over the years. Most commonly used to this day are \href{https://en.wikipedia.org/wiki/Advanced_Encryption_Standard}{AES \ExternalLink} (also known as Rijndael), \href{https://en.wikipedia.org/wiki/ChaCha20}{ChaCha20 \ExternalLink}, \href{https://en.wikipedia.org/wiki/ARIA_(cipher)}{ARIA \ExternalLink}, \href{https://en.wikipedia.org/wiki/Camellia_(cipher)}{Camellia \ExternalLink}, and a couple of others. You may have also heard about ciphers like \href{https://en.wikipedia.org/wiki/RC4}{RC4 \ExternalLink}, \href{https://en.wikipedia.org/wiki/Data_Encryption_Standard}{DES \ExternalLink} and \href{https://en.wikipedia.org/wiki/Triple_DES}{3DES \ExternalLink}, however they are considered to be insecure and therefore were deprecated. 
 
 \subsection{Where is it used?}
 
 Whenever we talk about encryption protocols, you can safely assume symmetric encryption is used. For example, TLS secures web access by combining symmetric and asymmetric ciphers, key exchange, authentication, and hashing (in what we call a ciphersuite). Symmetric ciphers are also the standard for encrypting large data volumes. VeraCrypt, a disk encryption utility, uses AES, Camellia, Kuznyechik, where as BitLocker uses AES. SSH used RC4, DES, and 3DES in the past, but now primarily relies on AES and ChaCha20.
 
 \subsection{Symmetric vs. Asymmetric}
-\textit{\blindtext[1]}
+
+Distinctive differences between symmetric and asymmetric cryptography have been described in the table below.
+
+\begin{center}
+{\renewcommand{\arraystretch}{1.7}
+\begin{tabular}{| m{3cm} | m{7cm}| m{7cm} |}
+    \hline
+    & Symmetric & Asymmetric \\
+    \hline
+    Key aspects & Symmetric cryptography uses \textbf{one key} to encrypt and decrypt information. & Asymmetric cryptography uses \textbf{two keys} that are mathematically-bound, where one is public and shared with others and the other one is kept private. Public key is used for encrypting messages, and the private key is used to decrypting messages. \\
+    \hline
+    Key security & Anyone that has access to the key can decrypt the ciphertext. & You can only decrypt information if you are in possesion of the private key. Having access to the public key does not give the adversary the ability to decrypt information. \\
+    \hline
+    Use cases & Encrypting large volumes of data, ie. files, drives, streams, etc. & Encrypting smaller volumes of data (messages, e-mails, keys), creating digital signatures, key exchange \\
+    \hline
+    Operation speed & Encryption and decryption is usually very fast and efficient, computational requirements are smaller. & Asymmetric operations are slower due to key sizes, computational overhead  mathematical complexity. \\
+    \hline
+    Assurances & Symmetric ciphers provide only \textbf{Confidentiality}. & Asymmetric ciphers provide \textbf{Confidentiality}, as well as \textbf{Integrity} and \textbf{Non-repudiation}.\\
+    \hline
+\end{tabular}
+}
+\end{center}
+
+You should understand that symmetric cryptography-despite it's security implications and limitations- plays an important part in what we call today hybrid cryptography.
 
 \subsection{Block ciphers}
 \textit{\blindtext[1]}
